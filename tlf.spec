@@ -2,10 +2,10 @@ Name:		tlf
 License:	GPL
 Group:		Communications
 Url:		http://home.iae.nl/users/reinc/TLF-0.2.html
-Version:	1.1.0	
+Version:	1.1.1
 Release:	1
 Summary:	TLF is a contest logging program for Linux
-Source0:	tlf-%{version}.tar.gz
+Source0:	http://www.hs-mittweida.de/tb/%{name}-%{version}.tar.gz
 BuildRequires:	hamlib-devel ncurses-devel glib2-devel
 
 %description
