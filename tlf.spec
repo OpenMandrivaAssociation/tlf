@@ -2,11 +2,12 @@ Name:		tlf
 License:	GPL
 Group:		Communications
 Url:		http://home.iae.nl/users/reinc/TLF-0.2.html
-Version:	1.1.1
+Version:	1.1.2
 Release:	1
 Summary:	TLF is a contest logging program for Linux
-Source0:	http://www.hs-mittweida.de/tb/%{name}-%{version}.tar.gz
-BuildRequires:	hamlib-devel ncurses-devel glib2-devel
+Source0:	https://github.com/downloads/Tlf/%{name}/%{name}-%{version}.tar.gz
+BuildRequires:	ncurses-devel glib2-devel
+BuildRequires:	gnuradio-devel
 
 %description
 Tlf is developed by Rein Couperus, PA0R. Hamlib is used here to get the rig's 
@@ -18,7 +19,7 @@ TRLOG (but much better of course).
 %setup -q
 
 %build
-%configure --enable-hamlib
+%configure2_5x --enable-hamlib
 %make
 
 %install
