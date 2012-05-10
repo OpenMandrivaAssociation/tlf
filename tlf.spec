@@ -8,7 +8,7 @@ Summary:	TLF is a contest logging program for Linux
 Source0:	https://github.com/downloads/Tlf/%{name}/%{name}-%{version}.tar.gz
 BuildRequires:	ncurses-devel glib2-devel
 BuildRequires:	gnuradio-devel
-BuildRequires:	hamlibs-devel
+BuildRequires:	hamlib-devel
 
 %description
 Tlf is developed by Rein Couperus, PA0R. Hamlib is used here to get the rig's 
