@@ -8,6 +8,7 @@ Summary:	TLF is a contest logging program for Linux
 Source0:	https://github.com/downloads/Tlf/%{name}/%{name}-%{version}.tar.gz
 BuildRequires:	ncurses-devel glib2-devel
 BuildRequires:	gnuradio-devel
+BuildRequires:	hamlibs-devel
 
 %description
 Tlf is developed by Rein Couperus, PA0R. Hamlib is used here to get the rig's 
@@ -19,7 +20,8 @@ TRLOG (but much better of course).
 %setup -q
 
 %build
-%configure2_5x --enable-hamlib
+%configure2_5x 
+#--enable-hamlib
 %make
 
 %install
@@ -35,9 +37,11 @@ TRLOG (but much better of course).
 %{_datadir}/tlf/callmaster
 %{_datadir}/tlf/cty.dat
 %{_datadir}/tlf/ssamults
-%{_datadir}/tlf/usa_canada_states
+#%{_datadir}/tlf/usa_canada_states
 %{_datadir}/tlf/spdxmults
 %{_datadir}/tlf/paccmults
 %{_datadir}/tlf/ea_sections
 %{_datadir}/tlf/logcfg.dat
 %{_datadir}/tlf/rules/*
+%{_datadir}/tlf/arrl10m_mults
+%{_datadir}/tlf/arrldx_mults
