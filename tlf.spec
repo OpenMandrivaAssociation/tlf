@@ -7,7 +7,7 @@ Release:	1
 Summary:	TLF is a contest logging program for Linux
 Source0:	https://github.com/downloads/Tlf/%{name}/%{name}-%{version}.tar.gz
 BuildRequires:	ncurses-devel glib2-devel
-BuildRequires:	gnuradio-devel
+BuildRequires:	pkgconfig(gnuradio-core)
 BuildRequires:	hamlib-devel
 
 %description
@@ -45,3 +45,24 @@ TRLOG (but much better of course).
 %{_datadir}/tlf/rules/*
 %{_datadir}/tlf/arrl10m_mults
 %{_datadir}/tlf/arrldx_mults
+
+
+%changelog
+* Thu May 10 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.1.2-1
++ Revision: 798019
+- hamlib-devel
+- version update 2.48
+- version update 1.1.2
+- BR: gnuradio-devel
+
+* Thu Jan 19 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.1.1-1
++ Revision: 762812
+- version update
+
+* Mon Dec 26 2011 Alexander Khrukin <akhrukin@mandriva.org> 1.1.0-1
++ Revision: 745396
+- so strange it was built on my test cooker and want into cluster
+- br fixes
+- glib2.0-devel BR
+- imported package tlf
+
