@@ -6,7 +6,8 @@ Version:	1.1.2
 Release:	2
 Summary:	Contest logging program for Linux
 Source0:	https://github.com/downloads/Tlf/%{name}/%{name}-%{version}.tar.gz
-BuildRequires:	ncurses-devel glib2-devel
+BuildRequires:	ncurses-devel
+BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gnuradio-core)
 BuildRequires:	hamlib-devel
 
