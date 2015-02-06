@@ -3,7 +3,7 @@ License:	GPL
 Group:		Communications
 Url:		http://home.iae.nl/users/reinc/TLF-0.2.html
 Version:	1.1.2
-Release:	2
+Release:	3
 Summary:	Contest logging program for Linux
 Source0:	https://github.com/downloads/Tlf/%{name}/%{name}-%{version}.tar.gz
 BuildRequires:	ncurses-devel
