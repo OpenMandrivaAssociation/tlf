@@ -1,11 +1,11 @@
 Name:		tlf
 License:	GPL
 Group:		Communications
-Url:		http://home.iae.nl/users/reinc/TLF-0.2.html
-Version:	1.1.2
-Release:	3
+Url:		http://tlf.github.io/
+Version:	1.4.1
+Release:	1
 Summary:	Contest logging program for Linux
-Source0:	https://github.com/downloads/Tlf/%{name}/%{name}-%{version}.tar.gz
+Source0:	https://github.com/Tlf/tlf/releases/download/tlf-%{version}/tlf-%{version}.tar.gz
 BuildRequires:	ncurses-devel
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gnuradio-core)
@@ -18,21 +18,21 @@ Tlf is a contest logging program with networking support, partially based on
 TRLOG (but much better of course).
 
 %prep
-%setup -q
+%autosetup -p1
+%configure
+#--enable-hamlib
 
 %build
-%configure2_5x 
-#--enable-hamlib
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc AUTHORS COPYING ChangeLog INSTALL NEWS README
 %{_bindir}/tlf
 %{_bindir}/play_vk
-%{_datadir}/man/man1/tlf.1.*
+%{_mandir}/man1/tlf.1*
 %{_bindir}/soundlog
 %{_datadir}/tlf/arrlsections
 %{_datadir}/tlf/callmaster
@@ -46,24 +46,3 @@ TRLOG (but much better of course).
 %{_datadir}/tlf/rules/*
 %{_datadir}/tlf/arrl10m_mults
 %{_datadir}/tlf/arrldx_mults
-
-
-%changelog
-* Thu May 10 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.1.2-1
-+ Revision: 798019
-- hamlib-devel
-- version update 2.48
-- version update 1.1.2
-- BR: gnuradio-devel
-
-* Thu Jan 19 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.1.1-1
-+ Revision: 762812
-- version update
-
-* Mon Dec 26 2011 Alexander Khrukin <akhrukin@mandriva.org> 1.1.0-1
-+ Revision: 745396
-- so strange it was built on my test cooker and want into cluster
-- br fixes
-- glib2.0-devel BR
-- imported package tlf
-
