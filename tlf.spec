@@ -1,7 +1,7 @@
 Name:		tlf
 License:	GPL
 Group:		Communications
-Url:		http://tlf.github.io/
+Url:		https://tlf.github.io/
 Version:	1.4.1
 Release:	1
 Summary:	Contest logging program for Linux
