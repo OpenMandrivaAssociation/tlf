@@ -6,6 +6,11 @@ Version:	1.4.1
 Release:	1
 Summary:	Contest logging program for Linux
 Source0:	https://github.com/Tlf/tlf/releases/download/tlf-%{version}/tlf-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	ncurses-devel
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gnuradio-core)
